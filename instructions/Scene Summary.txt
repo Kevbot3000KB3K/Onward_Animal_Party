@@ -1,0 +1,51 @@
+OPERATING SYSTEM BREAKDOWN
+
+Boot		Start the program cleanly
+Managers	Handle global systems
+Scenes		What the player actually sees
+Game Scene	Where the mechanic lives
+UI		Visual feedback layer
+
+
+
+Runtime order;
+
+Project Starts
+Boot scene runs
+Boot loads MainMenu
+MainMenu waits for player to start
+MainMenu loads Game scene
+Game scene runs gameplay
+Game ends -> UI shows Game Over
+Return to MainMenu
+
+-------------------------SCENES-------------------------
+
+Boot
+	Loads first.
+	Immediately switches to MainMenu.
+	Ensures managers are initialized.
+why?
+	Its a consistent entry point.
+	A place for loading screens later.
+	Safe setup layer.
+	It just starts things.
+
+MainMenu
+	Start Button
+	Quit Button
+	High Score (optional)
+	Calls load_scene/game when player clicks start.
+
+Game
+	Where every new mini-game lives.
+	Sandbox.
+	Only scene that I mod heavily.
+
+UI
+	Reuse it across games.
+	Swap UI styles.
+	Keep gameplay clean.
+	Sits ontop visually.
+	Listens to GameManager signals.
+

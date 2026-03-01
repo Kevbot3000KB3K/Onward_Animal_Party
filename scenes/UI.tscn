@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://d4eafqcqmdsqr"]
+
+[ext_resource type="Script" uid="uid://ci475oqwwjxxn" path="res://scripts/UI.gd" id="1_dj8aq"]
+[ext_resource type="FontFile" uid="uid://4u4m6nhe76jk" path="res://TitleFont.tres" id="2_ro3t7"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ro3t7"]
+font = ExtResource("2_ro3t7")
+
+[sub_resource type="LabelSettings" id="LabelSettings_5en4g"]
+font = ExtResource("2_ro3t7")
+
+[node name="CanvasLayer" type="CanvasLayer" unique_id=1465967320]
+script = ExtResource("1_dj8aq")
+
+[node name="UIRoot" type="Control" parent="." unique_id=845039124]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ScoreLabel" type="Label" parent="UIRoot" unique_id=1113920015]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 60.0
+offset_bottom = 35.0
+pivot_offset = Vector2(25, 0)
+theme_override_fonts/font = ExtResource("2_ro3t7")
+text = "Score"
+label_settings = SubResource("LabelSettings_ro3t7")
+horizontal_alignment = 1
+
+[node name="TimerLabel" type="Label" parent="UIRoot" unique_id=2023007910]
+layout_mode = 0
+offset_left = 260.0
+offset_top = 10.0
+offset_right = 310.0
+offset_bottom = 35.0
+pivot_offset = Vector2(25, 0)
+theme_override_fonts/font = ExtResource("2_ro3t7")
+text = "Timer"
+label_settings = SubResource("LabelSettings_5en4g")
+
+[node name="GameOverPanel" type="Label" parent="UIRoot" unique_id=218472921]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0

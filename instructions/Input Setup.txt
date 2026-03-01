@@ -1,0 +1,17 @@
+INPUT SETUP
+
+Confirm		F / Left Click		InputManager.confirm_pressed():
+Cancel		D / Right Click		InputManager.cancel_pressed():
+Start		Space Key		InputManager.start_pressed():
+Move Up		Up Arrow Key		InputManager.move_up():
+Move Down	Down Arrow Key		InputManager.move_down():
+Move Left	Left Arrow Key		InputManager.move_left():
+Move Right	Right Arrow Key		InputManager.move_right():
+Action 1	F			InputManager.action_1_pressed():
+Action 2	D			InputManager.action_2_pressed():
+Action 3	S			InputManager.action_3_pressed():
+Action 4	A			InputManager.action_4_pressed():
+
+Use it in other scripts like this:
+	if InputManager.confirm_pressed():
+

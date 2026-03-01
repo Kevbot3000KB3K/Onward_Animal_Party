@@ -1,0 +1,43 @@
+SCRIPTS SUMMARY
+
+GameManager
+	Stores:
+		Score
+		Time
+		Game state
+
+SceneLoader
+	Switches scenes.
+	Keeps me from writing get_tree().change_scene_to_file(...) everywhere.
+
+AudioManager
+	Global sound controller.
+	Both music and sound effects.
+	Don't have to attach AudioStreamPlayers manually every time.
+	I can just call AudioManager.play_sfx(sound)
+
+InputManager
+	Controls.
+	F	(A)				Confirm
+	D	(B)				Cancel
+	S	(R)				
+	A	(L)				
+	Space	(Start)				Menu
+	Arrow Keys (up, left, down, right)	Movement
+
+Boot
+	Simply loads MainMenu scene.
+	Exists so my entry flow is clean.
+
+CanvasLayer
+	Handles:
+		Updating labels
+		Showing Gameover
+	Listens to GameManager.
+
+MainMenu
+	Handles:
+		Start Button
+		Possibly resetting game
+	Calls GameManager.start_game()
+	Then loads Game scene

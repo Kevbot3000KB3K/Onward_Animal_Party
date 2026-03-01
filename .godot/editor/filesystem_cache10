@@ -1,0 +1,33 @@
+63f7b34db8d8cdea90c76aacccf841ec
+::res://::1772326778
+ARCADECLASSIC.TTF::FontFile::7030891023934532391::1772281660::1772282929::1::::<><><>0<>0<>6820150366e28c0c31710d32f0a32589<>res://.godot/imported/ARCADECLASSIC.TTF-4aef9f254f11210c6b95362e3ee1751d.fontdata::
+TitleFont.tres::FontFile::2078547891532219928::1772285402::0::1::::<><><>0<>0<><>::
+::res://assets/::1772286314
+::res://assets/actors/::1772285047
+PlayerPlaceholder.png::CompressedTexture2D::8581730713459117678::1772283505::1772285047::1::::<><><>0<>0<>786b1d97bf7b60529cd5d37b563088e9<>res://.godot/imported/PlayerPlaceholder.png-0a23a84100403cbf74a13c22fc38f2b6.ctex::
+::res://assets/Scenery/::1772286319
+StageBackground.png::CompressedTexture2D::6974841852882003996::1772286319::1772286319::1::::<><><>0<>0<>09c869374d9b9411624210bad353ada0<>res://.godot/imported/StageBackground.png-524161a6e2731b48c1e02f22ac319d59.ctex::
+::res://assets/ui/::1772285239
+TitleBackground.png::CompressedTexture2D::3208606234378692633::1772285239::1772285239::1::::<><><>0<>0<>c8a3245f73001132120a0fb61785cddf<>res://.godot/imported/TitleBackground.png-73dbc0c6bbfaf5eeb2d139d8ae21b2b1.ctex::
+::res://data/::1772277323
+::res://instructions/::1772280750
+Input Setup.txt::TextFile::-1::1772280750::0::1::::<><><>0<>0<><>::
+Scene Summary.txt::TextFile::-1::1772277323::0::1::::<><><>0<>0<><>::
+Scripts Summary.txt::TextFile::-1::1772277323::0::1::::<><><>0<>0<><>::
+Workflow Instructions.txt::TextFile::-1::1772277323::0::1::::<><><>0<>0<><>::
+::res://misc/::1772282928
+::res://scenes/::1772296030
+Boot.tscn::PackedScene::2545546772549442361::1772277323::0::1::::<><><>0<>0<><>::uid://suqdekkei7gt::::res://scripts/Boot.gd
+Game.tscn::PackedScene::7075463025111792320::1772286943::0::1::::<><><>0<>0<><>::uid://c6mwvj8kjdq25::::res://assets/Scenery/StageBackground.png<>uid://chgu7o0uibt5o::::res://scenes/Player.tscn<>uid://d4eafqcqmdsqr::::res://scenes/UI.tscn
+Player.tscn::PackedScene::5277821799503547294::1772296030::0::1::::<><><>0<>0<><>::uid://006kuejsv7jn::::res://scripts/Player.gd<>uid://dujb362o5tqje::::res://assets/actors/PlayerPlaceholder.png
+TitleScreen.tscn::PackedScene::2627350274846564929::1772285401::0::1::::<><><>0<>0<><>::uid://d1eks4ihp5ppd::::res://scripts/TitleScreen.gd<>uid://c7f20ou7x06dn::::res://ARCADECLASSIC.TTF<>uid://blyjjm64ciey0::::res://assets/ui/TitleBackground.png<>uid://4u4m6nhe76jk::::res://TitleFont.tres
+UI.tscn::PackedScene::9203005800774359121::1772285987::0::1::::<><><>0<>0<><>::uid://ci475oqwwjxxn::::res://scripts/UI.gd<>uid://4u4m6nhe76jk::::res://TitleFont.tres
+::res://scripts/::1772286943
+AudioManager.gd::GDScript::2144810891850172988::1772286613::0::1::::<>Node<><>0<>0<><>::
+Boot.gd::GDScript::1305663795833252511::1772280896::0::1::::<>Node<><>0<>0<><>::
+GameManager.gd::GDScript::7204662284680374156::1772277673::0::1::::<>Node<><>0<>0<><>::
+InputManager.gd::GDScript::8499943461444779620::1772280443::0::1::::<>Node<><>0<>0<><>::
+Player.gd::GDScript::1808231676597169447::1772286943::0::1::::<>CharacterBody2D<><>0<>0<><>::
+SceneLoader.gd::GDScript::3417040326877218::1772278440::0::1::::<>Node<><>0<>0<><>::
+TitleScreen.gd::GDScript::8993070346777216509::1772285636::0::1::::<>Node2D<><>0<>0<><>::
+UI.gd::GDScript::5396216350017000927::1772279293::0::1::::<>CanvasLayer<><>0<>0<><>::

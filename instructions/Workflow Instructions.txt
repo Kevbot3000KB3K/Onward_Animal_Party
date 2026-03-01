@@ -1,0 +1,38 @@
+MINI GAME INSTRUCTIONS
+
+----------------Step 1
+
+Duplicate the template
+Rename to whatever the new mini-game is.
+Open it.
+
+----------------Step 2
+
+Ignore everything except the Game scene.
+Don't touch these;
+	Boot
+	Managers
+	SceneLoader
+	AudioManager
+	InputManager
+
+You only modify Game.
+
+----------------Step 3
+
+Decide the Core Mechanic.
+	Examples:
+		Dodge falling blocks
+		Click targets quickly
+		Survive enemies
+		Platform to the goal
+
+Now you build that mechanic inside the Game scene.
+
+----------------Step 4
+
+Hook into GameManager.
+When player scores: 
+	GameManager.add_score(1)
+When player dies:
+	GameManager.end_game()

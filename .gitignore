@@ -1,0 +1,14 @@
+# Godot 4+ ignores
+.import/
+.export/
+.export_presets.cfg
+
+# Mono (if you use C#)
+.mono/
+data_*/
+*.csproj
+*.sln
+
+# OS files
+.DS_Store
+Thumbs.db
