@@ -12,6 +12,13 @@ var terrain_lookup = {
 func _ready():
 	build_map_data()
 
+func cell_to_world(cell: Vector3i) -> Vector3:
+
+	var world = gridmap.map_to_local(cell)
+	world.y += gridmap.cell_size.y * 0.5
+
+	return world
+
 func build_map_data():
 
 	map_data.clear()

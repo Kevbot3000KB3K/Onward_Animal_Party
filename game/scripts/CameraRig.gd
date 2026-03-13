@@ -14,22 +14,11 @@ var midpoint_triggered = false
 
 
 var rotation_index = 0
-
-func focus_target():
-
-	var tween = create_tween()
-
-	tween.tween_property(
-		self,
-		"position",
-		target.global_position,
-		0.4
-	)
 	
 func _process(delta):
 
 	if target:
-		position = position.lerp(target.global_position, 6 * delta)
+		global_position = global_position.lerp(target.global_position, 10 * delta)
 
 	if rotating and not midpoint_triggered:
 
@@ -38,7 +27,7 @@ func _process(delta):
 		if abs(current_angle - midpoint_angle) < 2:
 
 			midpoint_triggered = true
-			get_parent().unit.update_sprite_facing(rotation_index)
+			target.update_sprite_facing(rotation_index)
 		
 func rotate_right():
 

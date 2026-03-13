@@ -8,8 +8,11 @@
 [ext_resource type="SpriteFrames" uid="uid://cuxwjl1o7mc0q" path="res://game/assets/sprites/SpriteSheets/Jobs/SpriteFrames/Marksman.tres" id="6_1l2kt"]
 [ext_resource type="Script" uid="uid://ndpqw514f04y" path="res://game/scripts/CameraRig.gd" id="8_dt7x4"]
 [ext_resource type="PackedScene" uid="uid://61g5m7qupo7w" path="res://game/scenes/Cursor.tscn" id="9_pjihj"]
-[ext_resource type="Script" uid="uid://bledrkx6jtgeo" path="res://game/scenes/MovementSystem.gd" id="9_yjofe"]
-[ext_resource type="Script" uid="uid://d2bx8kugh2um3" path="res://game/scenes/BattleController.gd" id="10_yjofe"]
+[ext_resource type="Script" uid="uid://bledrkx6jtgeo" path="res://game/scripts/MovementSystem.gd" id="9_yjofe"]
+[ext_resource type="Script" uid="uid://d2bx8kugh2um3" path="res://game/scripts/BattleController.gd" id="10_yjofe"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_yjofe"]
+size = Vector3(200, 1, 200)
 
 [node name="GameScene" type="Node3D" unique_id=995618526]
 script = ExtResource("1_3qy5s")
@@ -24,8 +27,9 @@ light_indirect_energy = 4.294
 light_volumetric_fog_energy = 3.635
 shadow_enabled = true
 
-[node name="Feliz" parent="." unique_id=701615420 instance=ExtResource("4_13kvb")]
-transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 0.84321076, 5.5987525, -7.5493364)
+[node name="Feliz" parent="." unique_id=701615420 node_paths=PackedStringArray("gridmap") instance=ExtResource("4_13kvb")]
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 6.3436255, 5.5987525, 2.5634418)
+gridmap = NodePath("../GridMap/GridMap")
 default_gear_frames = ExtResource("6_1l2kt")
 curate_frames = ExtResource("5_j5bx6")
 marksman_frames = ExtResource("6_1l2kt")
@@ -49,7 +53,6 @@ visible = false
 [node name="UI" parent="." unique_id=828137587 instance=ExtResource("2_3qy5s")]
 
 [node name="Cursor" parent="." unique_id=695930461 node_paths=PackedStringArray("gridmap", "grid_controller") instance=ExtResource("9_pjihj")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.4665337, 0)
 gridmap = NodePath("../GridMap/GridMap")
 grid_controller = NodePath("../GridMap")
 
@@ -58,9 +61,10 @@ script = ExtResource("8_dt7x4")
 target = NodePath("../Feliz")
 
 [node name="CameraPivot" type="Node3D" parent="CameraRig" unique_id=678667891]
+transform = Transform3D(0.99999994, 0, 0, 0, 0.7071067, 0.7071067, 0, -0.7071067, 0.7071067, 0, 0, 0)
 
 [node name="Camera3D" type="Camera3D" parent="CameraRig/CameraPivot" unique_id=1778269171]
-transform = Transform3D(0.79863554, -0.23997317, 0.5519005, 0, 0.9170601, 0.39874908, -0.601815, -0.3184552, 0.7323968, 8.239, 6.108, 10.438)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 12)
 projection = 1
 current = true
 size = 6.0
@@ -68,15 +72,27 @@ near = 0.001
 
 [node name="Systems" type="Node3D" parent="." unique_id=209306978]
 
-[node name="Movement" type="Node3D" parent="Systems" unique_id=1486373715]
+[node name="Movement" type="Node3D" parent="Systems" unique_id=1486373715 node_paths=PackedStringArray("gridmap", "grid_controller")]
 script = ExtResource("9_yjofe")
+gridmap = NodePath("../../GridMap/GridMap")
+grid_controller = NodePath("../../GridMap")
 
-[node name="BattleController" type="Node3D" parent="Systems" unique_id=895002169]
+[node name="BattleController" type="Node3D" parent="Systems" unique_id=895002169 node_paths=PackedStringArray("movement_system", "grid_controller", "selected_unit")]
 script = ExtResource("10_yjofe")
+movement_system = NodePath("../Movement")
+grid_controller = NodePath("../../GridMap")
+selected_unit = NodePath("../../Feliz")
+
+[node name="GroundPlane" type="Node3D" parent="." unique_id=109631841]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="GroundPlane" unique_id=1938625017]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="GroundPlane/StaticBody3D" unique_id=559425982]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
+shape = SubResource("BoxShape3D_yjofe")
 
 [connection signal="ready" from="." to="UI" method="_on_game_scene_ready"]
 [connection signal="move_pressed" from="UI" to="Systems/BattleController" method="_on_ui_move_pressed"]
 [connection signal="wait_pressed" from="UI" to="Systems/BattleController" method="_on_ui_wait_pressed"]
 
-[editable path="GridMap"]
 [editable path="Feliz"]

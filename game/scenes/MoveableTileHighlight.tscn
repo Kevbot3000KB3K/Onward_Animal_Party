@@ -1,19 +1,28 @@
 [gd_scene format=3 uid="uid://cletmr67i4gfg"]
 
-[ext_resource type="Script" uid="uid://b8umlqsd64yk5" path="res://game/scripts/Cursor.gd" id="1_80s4n"]
+[ext_resource type="Script" uid="uid://mwujhg7j6vhs" path="res://game/scenes/MoveableTileHighlight.gd" id="1_il0h3"]
 [ext_resource type="Texture2D" uid="uid://bf75yuao776k0" path="res://game/Map/Tiles/MoveableTileHighlight.png" id="2_il0h3"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_80s4n"]
 transparency = 1
 albedo_texture = ExtResource("2_il0h3")
+normal_enabled = true
+texture_filter = 0
 
 [sub_resource type="QuadMesh" id="QuadMesh_f5k76"]
 material = SubResource("StandardMaterial3D_80s4n")
-flip_faces = true
 
-[node name="TileHighlight" type="Node3D" unique_id=695930461]
-script = ExtResource("1_80s4n")
+[sub_resource type="BoxShape3D" id="BoxShape3D_il0h3"]
+size = Vector3(1, 0.17041016, 1)
 
-[node name="TileSurface" type="MeshInstance3D" parent="." unique_id=188771849]
-transform = Transform3D(-1.42062e-07, 3.25, -1.42062e-07, 0, -1.42062e-07, -3.25, -3.25, -1.42062e-07, 6.2097277e-15, 0, -0.5, 0)
+[node name="TileHighlight" type="Area3D" unique_id=348055418]
+transform = Transform3D(1, 0, 0, 0, 1.1924881e-08, 1, 0, -1, 1.1924881e-08, 0, 0, 0)
+script = ExtResource("1_il0h3")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=188771849]
 mesh = SubResource("QuadMesh_f5k76")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=495538191]
+transform = Transform3D(0.80875, 0, 0, 0, 0.0025, 0, 0, 0, 0.8125, 0, 0, 0)
+visible = false
+shape = SubResource("BoxShape3D_il0h3")

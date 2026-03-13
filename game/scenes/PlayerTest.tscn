@@ -5,6 +5,7 @@
 [ext_resource type="SpriteFrames" uid="uid://cuxwjl1o7mc0q" path="res://game/assets/sprites/SpriteSheets/Jobs/SpriteFrames/Marksman.tres" id="2_0h7t4"]
 [ext_resource type="SpriteFrames" uid="uid://dkaiveb75g7rd" path="res://game/assets/sprites/SpriteSheets/Units/Feliz_Hair.tres" id="3_3sbpl"]
 [ext_resource type="Texture2D" uid="uid://dbqfbr2jgfx7w" path="res://game/assets/sprites/UI/Cursor/WaitBall.png" id="5_lk5tw"]
+[ext_resource type="Texture2D" uid="uid://cp08f5g7ctbda" path="res://game/assets/sprites/UI/UnitShadow.png" id="6_jdp3m"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_lk5tw"]
 size = Vector3(0.19433594, 0.41606998, 0.3121338)
@@ -24,6 +25,18 @@ billboard_mode = 1
 [sub_resource type="QuadMesh" id="QuadMesh_nq8op"]
 material = SubResource("StandardMaterial3D_jdp3m")
 size = Vector2(0.2, 0.2)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nq8op"]
+transparency = 1
+shading_mode = 0
+albedo_color = Color(0, 0, 0, 0.5529412)
+albedo_texture = ExtResource("6_jdp3m")
+texture_filter = 0
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_rxyr7"]
+material = SubResource("StandardMaterial3D_nq8op")
+size = Vector2(0.25, 0.25)
+center_offset = Vector3(0, -0.02, 0)
 
 [node name="Feliz" type="CharacterBody3D" unique_id=701615420]
 transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 0, 0, 0)
@@ -81,5 +94,9 @@ mesh = SubResource("QuadMesh_nq8op")
 [node name="Orb_UL" type="MeshInstance3D" parent="WaitOrbs" unique_id=67994980]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2, 0.162, 0)
 mesh = SubResource("QuadMesh_nq8op")
+
+[node name="Shadow" type="MeshInstance3D" parent="." unique_id=1554944788]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.19705395, 0)
+mesh = SubResource("PlaneMesh_rxyr7")
 
 [connection signal="frame_changed" from="Body" to="." method="_on_body_frame_changed"]

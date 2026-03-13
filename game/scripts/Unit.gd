@@ -4,6 +4,9 @@ extends Node3D
 @onready var gear: AnimatedSprite3D = $Gear
 @onready var hair: AnimatedSprite3D = $Hair
 
+@export var gridmap : GridMap
+var current_cell : Vector3i
+
 var move_range = 4
 
 var choosing_facing = false
@@ -27,6 +30,28 @@ func _process(_delta):
 
 	if choosing_facing:
 		update_facing_preview()
+
+func snap_to_cell(cell: Vector3i, gridmap: GridMap):
+
+	var world = gridmap.map_to_local(cell)
+	world.y += gridmap.cell_size.y * 0.5
+
+	global_position = world
+
+func set_cell(cell: Vector3i):
+
+	var world = gridmap.map_to_local(cell)
+
+	world.y += gridmap.cell_size.y * 0.5
+
+	global_position = world
+
+func cell_to_world(cell: Vector3i) -> Vector3:
+
+	var world = gridmap.map_to_local(cell)
+	world.y += gridmap.cell_size.y * 0.5
+
+	return world
 
 func update_facing_preview():
 
@@ -217,6 +242,5 @@ func _on_body_frame_changed():
 
 func get_current_cell():
 
-	var gridmap = get_parent().gridmap
-
-	return gridmap.local_to_map(global_position)
+	var cell = gridmap.local_to_map(global_position)
+	return cell
