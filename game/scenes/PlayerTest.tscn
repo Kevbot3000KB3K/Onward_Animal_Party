@@ -4,19 +4,26 @@
 [ext_resource type="SpriteFrames" uid="uid://dlfhx4100avgs" path="res://game/assets/sprites/SpriteSheets/Units/Feliz.tres" id="1_me37f"]
 [ext_resource type="SpriteFrames" uid="uid://cuxwjl1o7mc0q" path="res://game/assets/sprites/SpriteSheets/Jobs/SpriteFrames/Marksman.tres" id="2_0h7t4"]
 [ext_resource type="SpriteFrames" uid="uid://dkaiveb75g7rd" path="res://game/assets/sprites/SpriteSheets/Units/Feliz_Hair.tres" id="3_3sbpl"]
+[ext_resource type="Texture2D" uid="uid://dbqfbr2jgfx7w" path="res://game/assets/sprites/UI/Cursor/WaitBall.png" id="5_lk5tw"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_lk5tw"]
 size = Vector3(0.19433594, 0.41606998, 0.3121338)
 
-[sub_resource type="SphereMesh" id="SphereMesh_3sbpl"]
-radius = 0.05
-height = 0.1
-radial_segments = 4
-rings = 2
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jdp3m"]
+transparency = 1
+albedo_color = Color(2.0513468, 2.0513468, 2.0513468, 1)
+albedo_texture = ExtResource("5_lk5tw")
+albedo_texture_force_srgb = true
+metallic = 1.0
+metallic_specular = 1.0
+normal_enabled = true
+normal_scale = 16.0
+texture_filter = 0
+billboard_mode = 1
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lk5tw"]
-shading_mode = 0
-albedo_color = Color(0.72, 0.72, 0.2808, 1)
+[sub_resource type="QuadMesh" id="QuadMesh_nq8op"]
+material = SubResource("StandardMaterial3D_jdp3m")
+size = Vector2(0.2, 0.2)
 
 [node name="Feliz" type="CharacterBody3D" unique_id=701615420]
 transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 0, 0, 0)
@@ -61,22 +68,18 @@ shape = SubResource("BoxShape3D_lk5tw")
 
 [node name="Orb_DL" type="MeshInstance3D" parent="WaitOrbs" unique_id=1827544127]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.162, 0.2)
-mesh = SubResource("SphereMesh_3sbpl")
-surface_material_override/0 = SubResource("StandardMaterial3D_lk5tw")
+mesh = SubResource("QuadMesh_nq8op")
 
 [node name="Orb_DR" type="MeshInstance3D" parent="WaitOrbs" unique_id=1439525696]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2, 0.162, 0)
-mesh = SubResource("SphereMesh_3sbpl")
-surface_material_override/0 = SubResource("StandardMaterial3D_lk5tw")
+mesh = SubResource("QuadMesh_nq8op")
 
 [node name="Orb_UR" type="MeshInstance3D" parent="WaitOrbs" unique_id=26553733]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.162, -0.2)
-mesh = SubResource("SphereMesh_3sbpl")
-surface_material_override/0 = SubResource("StandardMaterial3D_lk5tw")
+mesh = SubResource("QuadMesh_nq8op")
 
 [node name="Orb_UL" type="MeshInstance3D" parent="WaitOrbs" unique_id=67994980]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2, 0.162, 0)
-mesh = SubResource("SphereMesh_3sbpl")
-surface_material_override/0 = SubResource("StandardMaterial3D_lk5tw")
+mesh = SubResource("QuadMesh_nq8op")
 
 [connection signal="frame_changed" from="Body" to="." method="_on_body_frame_changed"]

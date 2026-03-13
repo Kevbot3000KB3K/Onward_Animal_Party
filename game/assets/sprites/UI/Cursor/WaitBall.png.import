@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bh750i72lnpcg"
-path.s3tc="res://.godot/imported/Skybox1.png-e4e20d121eb2ba1856a3c598fee69828.s3tc.ctex"
+uid="uid://dbqfbr2jgfx7w"
+path.s3tc="res://.godot/imported/WaitBall.png-9abf62851759fa3e3f8653d8de6848ee.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://game/assets/sprites/Skybox1.png"
-dest_files=["res://.godot/imported/Skybox1.png-e4e20d121eb2ba1856a3c598fee69828.s3tc.ctex"]
+source_file="res://game/assets/sprites/UI/Cursor/WaitBall.png"
+dest_files=["res://.godot/imported/WaitBall.png-9abf62851759fa3e3f8653d8de6848ee.s3tc.ctex"]
 
 [params]
 

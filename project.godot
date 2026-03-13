@@ -37,7 +37,6 @@ folder_colors={
 "res://data/": "gray",
 "res://game/": "red",
 "res://game/assets/": "green",
-"res://game/assets/audio/": "yellow",
 "res://game/assets/sprites/": "pink",
 "res://game/scenes/": "blue",
 "res://game/scripts/": "orange",

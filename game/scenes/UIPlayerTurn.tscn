@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://di3anlbkfl2o1"]
 
-[ext_resource type="Script" uid="uid://ci1bv77xvgm14" path="res://UI.gd" id="1_1rjsm"]
+[ext_resource type="Script" uid="uid://ci1bv77xvgm14" path="res://game/scripts/UI.gd" id="1_1rjsm"]
 [ext_resource type="Texture2D" uid="uid://6lv08ahev8qc" path="res://game/assets/sprites/UI/Battle/Buttons/ZoomOut.png" id="2_ogmug"]
 [ext_resource type="Texture2D" uid="uid://b6wqgm4rp6ib1" path="res://game/assets/sprites/UI/Battle/Buttons/ZoomOutPressed.png" id="3_mk7n8"]
 [ext_resource type="Texture2D" uid="uid://bt40sea174rbu" path="res://game/assets/sprites/UI/Battle/Buttons/ZoomIn.png" id="4_t3qmf"]
@@ -288,4 +288,5 @@ texture_pressed = ExtResource("23_5bwjg")
 [connection signal="pressed" from="ZoomIn" to="." method="_on_zoom_in_pressed"]
 [connection signal="pressed" from="RotateRight" to="." method="_on_rotate_right_pressed"]
 [connection signal="pressed" from="RotateLeft" to="." method="_on_rotate_left_pressed"]
+[connection signal="pressed" from="Choices/Move" to="." method="_on_move_pressed"]
 [connection signal="pressed" from="Choices/Wait" to="." method="_on_wait_pressed"]

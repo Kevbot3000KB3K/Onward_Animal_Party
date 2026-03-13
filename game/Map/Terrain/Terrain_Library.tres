@@ -1,8 +1,8 @@
 [gd_resource type="MeshLibrary" format=3 uid="uid://csdhqvgy5j7d1"]
 
-[ext_resource type="BoxMesh" uid="uid://dqielb6tbcl47" path="res://game/Map/Terrain/RockCube.tres" id="1_3u516"]
-[ext_resource type="BoxMesh" uid="uid://dfxt6m2p4d1dp" path="res://game/Map/Terrain/Sand1Cube.tres" id="2_ld61h"]
-[ext_resource type="BoxMesh" uid="uid://bn7gihwddg2ol" path="res://game/Map/Terrain/Sand2Cube.tres" id="3_c7ho6"]
+[ext_resource type="BoxMesh" uid="uid://dqielb6tbcl47" path="res://game/Map/Terrain/Meshes/RockCube.tres" id="1_3u516"]
+[ext_resource type="BoxMesh" uid="uid://dfxt6m2p4d1dp" path="res://game/Map/Terrain/Meshes/Sand1Cube.tres" id="2_ld61h"]
+[ext_resource type="BoxMesh" uid="uid://bn7gihwddg2ol" path="res://game/Map/Terrain/Meshes/Sand2Cube.tres" id="3_c7ho6"]
 [ext_resource type="Texture2D" uid="uid://bd4h5ksd4530v" path="res://game/assets/sprites/Terrain/Desert/Decor/Tree1.png" id="4_p12nq"]
 [ext_resource type="Texture2D" uid="uid://bchcu366rvpw1" path="res://game/assets/sprites/Terrain/Desert/Decor/Tree2.png" id="5_kk4ie"]
 [ext_resource type="Texture2D" uid="uid://xyebqgfvqskq" path="res://game/assets/sprites/Terrain/Desert/Decor/Cactus.png" id="6_ttkyl"]

@@ -1,57 +1,15 @@
 [gd_scene format=3 uid="uid://b5pmtox28j5n8"]
 
-[ext_resource type="Script" uid="uid://dxe75igfgfgey" path="res://game/scenes/GameScene.gd" id="1_3qy5s"]
+[ext_resource type="Script" uid="uid://dxe75igfgfgey" path="res://game/scripts/GameScene.gd" id="1_3qy5s"]
 [ext_resource type="PackedScene" uid="uid://di3anlbkfl2o1" path="res://game/scenes/UIPlayerTurn.tscn" id="2_3qy5s"]
 [ext_resource type="PackedScene" uid="uid://jrm8tw2ad2wt" path="res://game/scenes/TestMap.tscn" id="4_5k6yn"]
 [ext_resource type="PackedScene" uid="uid://ccgu211mp1d1f" path="res://game/scenes/PlayerTest.tscn" id="4_13kvb"]
 [ext_resource type="SpriteFrames" uid="uid://xa8wm23bmuw5" path="res://game/assets/sprites/SpriteSheets/Jobs/SpriteFrames/Curate.tres" id="5_j5bx6"]
 [ext_resource type="SpriteFrames" uid="uid://cuxwjl1o7mc0q" path="res://game/assets/sprites/SpriteSheets/Jobs/SpriteFrames/Marksman.tres" id="6_1l2kt"]
-[ext_resource type="Texture2D" uid="uid://bh750i72lnpcg" path="res://game/assets/sprites/Skybox1.png" id="7_1l2kt"]
-[ext_resource type="Script" uid="uid://ndpqw514f04y" path="res://game/scenes/CameraRig.gd" id="8_dt7x4"]
+[ext_resource type="Script" uid="uid://ndpqw514f04y" path="res://game/scripts/CameraRig.gd" id="8_dt7x4"]
 [ext_resource type="PackedScene" uid="uid://61g5m7qupo7w" path="res://game/scenes/Cursor.tscn" id="9_pjihj"]
-
-[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_dt7x4"]
-panorama = ExtResource("7_1l2kt")
-
-[sub_resource type="Sky" id="Sky_pjihj"]
-sky_material = SubResource("PanoramaSkyMaterial_dt7x4")
-
-[sub_resource type="Environment" id="Environment_yjofe"]
-background_mode = 2
-background_energy_multiplier = 1.1
-sky = SubResource("Sky_pjihj")
-sky_rotation = Vector3(-1.4049901, 0, 0)
-ambient_light_color = Color(0.78431374, 1, 0, 1)
-ambient_light_energy = 0.4
-tonemap_mode = 3
-tonemap_exposure = 1.12
-tonemap_white = 4.92
-ssr_max_steps = 44
-ssr_fade_in = 0.24367519
-ssr_fade_out = 0.7071054
-ssao_enabled = true
-ssao_radius = 0.6
-ssao_intensity = 1.6
-glow_enabled = true
-glow_normalized = true
-glow_bloom = 0.21
-fog_enabled = true
-fog_light_color = Color(2.1624622, 2.1505518, 1.4478298, 1)
-fog_light_energy = 0.01
-fog_density = 0.02
-fog_sky_affect = 0.784
-adjustment_enabled = true
-adjustment_brightness = 1.1
-adjustment_contrast = 1.1
-adjustment_saturation = 1.1
-
-[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_8mkeg"]
-exposure_multiplier = 0.815
-auto_exposure_scale = 0.5
-dof_blur_far_distance = 0.6
-dof_blur_far_transition = 7108.76
-dof_blur_near_distance = 0.01
-dof_blur_amount = 0.05
+[ext_resource type="Script" uid="uid://bledrkx6jtgeo" path="res://game/scenes/MovementSystem.gd" id="9_yjofe"]
+[ext_resource type="Script" uid="uid://d2bx8kugh2um3" path="res://game/scenes/BattleController.gd" id="10_yjofe"]
 
 [node name="GameScene" type="Node3D" unique_id=995618526]
 script = ExtResource("1_3qy5s")
@@ -88,15 +46,12 @@ visible = false
 [node name="Orb_UL" parent="Feliz/WaitOrbs" parent_id_path=PackedInt32Array(701615420, 1476522867) index="3" unique_id=67994980]
 visible = false
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=263542317]
-environment = SubResource("Environment_yjofe")
-camera_attributes = SubResource("CameraAttributesPractical_8mkeg")
-
 [node name="UI" parent="." unique_id=828137587 instance=ExtResource("2_3qy5s")]
 
-[node name="Cursor" parent="." unique_id=695930461 node_paths=PackedStringArray("gridmap") instance=ExtResource("9_pjihj")]
+[node name="Cursor" parent="." unique_id=695930461 node_paths=PackedStringArray("gridmap", "grid_controller") instance=ExtResource("9_pjihj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.4665337, 0)
 gridmap = NodePath("../GridMap/GridMap")
+grid_controller = NodePath("../GridMap")
 
 [node name="CameraRig" type="Node3D" parent="." unique_id=1078043424 node_paths=PackedStringArray("target")]
 script = ExtResource("8_dt7x4")
@@ -111,7 +66,17 @@ current = true
 size = 6.0
 near = 0.001
 
+[node name="Systems" type="Node3D" parent="." unique_id=209306978]
+
+[node name="Movement" type="Node3D" parent="Systems" unique_id=1486373715]
+script = ExtResource("9_yjofe")
+
+[node name="BattleController" type="Node3D" parent="Systems" unique_id=895002169]
+script = ExtResource("10_yjofe")
+
 [connection signal="ready" from="." to="UI" method="_on_game_scene_ready"]
+[connection signal="move_pressed" from="UI" to="Systems/BattleController" method="_on_ui_move_pressed"]
+[connection signal="wait_pressed" from="UI" to="Systems/BattleController" method="_on_ui_wait_pressed"]
 
 [editable path="GridMap"]
 [editable path="Feliz"]

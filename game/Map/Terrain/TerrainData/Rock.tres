@@ -1,8 +1,9 @@
 [gd_resource type="Resource" script_class="TerrainData" format=3 uid="uid://dwkqaqr0k2658"]
 
-[ext_resource type="Script" uid="uid://c4ft6dknm7g8o" path="res://TerrainData.gd" id="1_k4xpp"]
+[ext_resource type="Script" uid="uid://c4ft6dknm7g8o" path="res://game/scripts/TerrainData.gd" id="1_cmmnx"]
 
 [resource]
-script = ExtResource("1_k4xpp")
+script = ExtResource("1_cmmnx")
 terrain_name = "Rock"
+walkable = false
 metadata/_custom_type_script = "uid://c4ft6dknm7g8o"

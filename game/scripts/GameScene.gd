@@ -7,12 +7,7 @@ extends Node3D
 
 func _ready():
 
-	ui.walk_pressed.connect(unit.walk)
 	ui.wait_pressed.connect(_on_ui_wait_pressed)
-
-	ui.curate_pressed.connect(unit.set_curate)
-	ui.marksman_pressed.connect(unit.set_marksman)
-	ui.nude_pressed.connect(unit.set_nude)
 
 	ui.rotate_right_pressed.connect(_rotate_right)
 	ui.rotate_left_pressed.connect(_rotate_left)

@@ -4,6 +4,8 @@ extends Node3D
 @onready var gear: AnimatedSprite3D = $Gear
 @onready var hair: AnimatedSprite3D = $Hair
 
+var move_range = 4
+
 var choosing_facing = false
 var current_facing = "DL"
 const DIRECTIONS = ["UL","UR","DR","DL"]
@@ -191,63 +193,20 @@ func set_flip(value):
 	gear.flip_h = value
 	hair.flip_h = value
 	
-func walk():
-	current_state = "walk"
+func move():
+	current_state = "move"
 	update_animation()
 
 func wait():
 	current_state = "idle"
 	update_animation()
-	
-func set_curate():
-	gear.sprite_frames = curate_frames
-	update_animation()
 
-func set_marksman():
-	gear.sprite_frames = marksman_frames
-	update_animation()
-
-func set_nude():
-	gear.visible = false
-	
-func show_gear():
-	gear.visible = true
-
-
-func _on_up_pressed() -> void:
-	face_up_right()
-
-
-func _on_left_pressed() -> void:
-	face_up_left()
-
-
-func _on_right_pressed() -> void:
-	face_down_right()
-
-
-func _on_down_pressed() -> void:
-	face_down_left()
-
-
-func _on_walk_pressed() -> void:
-	walk()
+func _on_move_pressed() -> void:
+	move()
 
 
 func _on_wait_pressed() -> void:
 	wait()
-
-
-func _on_curate_pressed() -> void:
-	set_curate()
-
-
-func _on_marksman_pressed() -> void:
-	set_marksman()
-
-
-func _on_nude_pressed() -> void:
-	set_nude()
 
 func _on_body_frame_changed():
 
@@ -255,3 +214,9 @@ func _on_body_frame_changed():
 
 	if hair.visible:
 		hair.frame = body.frame
+
+func get_current_cell():
+
+	var gridmap = get_parent().gridmap
+
+	return gridmap.local_to_map(global_position)

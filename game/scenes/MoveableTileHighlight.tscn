@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://cletmr67i4gfg"]
+
+[ext_resource type="Script" uid="uid://b8umlqsd64yk5" path="res://game/scripts/Cursor.gd" id="1_80s4n"]
+[ext_resource type="Texture2D" uid="uid://bf75yuao776k0" path="res://game/Map/Tiles/MoveableTileHighlight.png" id="2_il0h3"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_80s4n"]
+transparency = 1
+albedo_texture = ExtResource("2_il0h3")
+
+[sub_resource type="QuadMesh" id="QuadMesh_f5k76"]
+material = SubResource("StandardMaterial3D_80s4n")
+flip_faces = true
+
+[node name="TileHighlight" type="Node3D" unique_id=695930461]
+script = ExtResource("1_80s4n")
+
+[node name="TileSurface" type="MeshInstance3D" parent="." unique_id=188771849]
+transform = Transform3D(-1.42062e-07, 3.25, -1.42062e-07, 0, -1.42062e-07, -3.25, -3.25, -1.42062e-07, 6.2097277e-15, 0, -0.5, 0)
+mesh = SubResource("QuadMesh_f5k76")

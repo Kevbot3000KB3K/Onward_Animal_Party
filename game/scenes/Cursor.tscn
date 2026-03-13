@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://61g5m7qupo7w"]
 
 [ext_resource type="Texture2D" uid="uid://5eacniywlxws" path="res://game/assets/sprites/UI/Cursor/CursorPointerSheet.png" id="1_6y84p"]
-[ext_resource type="Script" uid="uid://b8umlqsd64yk5" path="res://game/scenes/Cursor.gd" id="1_k3f3t"]
+[ext_resource type="Script" uid="uid://b8umlqsd64yk5" path="res://game/scripts/Cursor.gd" id="1_k3f3t"]
 [ext_resource type="Texture2D" uid="uid://cow5yu814pb5i" path="res://game/assets/sprites/UI/Cursor/TileSelection.png" id="2_yd333"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_yd333"]

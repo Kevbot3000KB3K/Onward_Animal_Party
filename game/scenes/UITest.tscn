@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://b2murxeg5vqy2"]
 
-[ext_resource type="Script" uid="uid://ci1bv77xvgm14" path="res://UI.gd" id="1_yqla1"]
+[ext_resource type="Script" uid="uid://ci1bv77xvgm14" path="res://game/scripts/UI.gd" id="1_yqla1"]
 [ext_resource type="Texture2D" uid="uid://bdmy0nmihismn" path="res://game/assets/sprites/UI/Debug/UpArrow.png" id="2_x8kua"]
 [ext_resource type="Texture2D" uid="uid://dq46s67k8hicc" path="res://game/assets/sprites/UI/Debug/ZoomOut.png" id="3_rli23"]
 [ext_resource type="Texture2D" uid="uid://dqyhxrc0d7t4e" path="res://game/assets/sprites/UI/Debug/ZoomIn.png" id="4_7c1cp"]
