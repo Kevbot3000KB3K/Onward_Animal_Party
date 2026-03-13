@@ -1,0 +1,155 @@
+[gd_resource type="MeshLibrary" format=3 uid="uid://csdhqvgy5j7d1"]
+
+[ext_resource type="BoxMesh" uid="uid://dqielb6tbcl47" path="res://game/Map/Terrain/RockCube.tres" id="1_3u516"]
+[ext_resource type="BoxMesh" uid="uid://dfxt6m2p4d1dp" path="res://game/Map/Terrain/Sand1Cube.tres" id="2_ld61h"]
+[ext_resource type="BoxMesh" uid="uid://bn7gihwddg2ol" path="res://game/Map/Terrain/Sand2Cube.tres" id="3_c7ho6"]
+[ext_resource type="Texture2D" uid="uid://bd4h5ksd4530v" path="res://game/assets/sprites/Terrain/Desert/Decor/Tree1.png" id="4_p12nq"]
+[ext_resource type="Texture2D" uid="uid://bchcu366rvpw1" path="res://game/assets/sprites/Terrain/Desert/Decor/Tree2.png" id="5_kk4ie"]
+[ext_resource type="Texture2D" uid="uid://xyebqgfvqskq" path="res://game/assets/sprites/Terrain/Desert/Decor/Cactus.png" id="6_ttkyl"]
+[ext_resource type="Texture2D" uid="uid://28xep57svrs" path="res://game/assets/sprites/Terrain/Desert/Decor/Cactus2.png" id="7_gc3rv"]
+[ext_resource type="Texture2D" uid="uid://cp1dei3jn4dbk" path="res://game/assets/sprites/Terrain/Desert/Decor/Bones2.png" id="8_2ekry"]
+[ext_resource type="Texture2D" uid="uid://bumcldvlv3v4q" path="res://game/assets/sprites/Terrain/Desert/Decor/Bones1.png" id="9_omnv6"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_p12nq"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_kk4ie"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ttkyl"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_agllt"]
+transparency = 1
+cull_mode = 2
+albedo_texture = ExtResource("4_p12nq")
+texture_filter = 0
+billboard_mode = 1
+
+[sub_resource type="QuadMesh" id="QuadMesh_fuqmr"]
+lightmap_size_hint = Vector2i(12, 12)
+material = SubResource("StandardMaterial3D_agllt")
+add_uv2 = true
+size = Vector2(2, 2)
+center_offset = Vector3(0, 0.5, 0)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jt8lb"]
+transparency = 1
+albedo_texture = ExtResource("5_kk4ie")
+normal_enabled = true
+texture_filter = 0
+billboard_mode = 1
+
+[sub_resource type="QuadMesh" id="QuadMesh_yxwwy"]
+lightmap_size_hint = Vector2i(7, 7)
+material = SubResource("StandardMaterial3D_jt8lb")
+size = Vector2(2, 2)
+center_offset = Vector3(0, 0.5, 0)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6wwi5"]
+transparency = 1
+albedo_texture = ExtResource("6_ttkyl")
+normal_enabled = true
+texture_filter = 0
+billboard_mode = 1
+
+[sub_resource type="QuadMesh" id="QuadMesh_xmk83"]
+material = SubResource("StandardMaterial3D_6wwi5")
+size = Vector2(0.5, 0.5)
+center_offset = Vector3(0, -0.25, 0)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6sbdl"]
+render_priority = -1
+transparency = 1
+albedo_texture = ExtResource("7_gc3rv")
+texture_filter = 0
+billboard_mode = 1
+
+[sub_resource type="QuadMesh" id="QuadMesh_phoxs"]
+material = SubResource("StandardMaterial3D_6sbdl")
+size = Vector2(0.5, 0.5)
+center_offset = Vector3(0, -0.25, 0)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pbd58"]
+transparency = 1
+albedo_texture = ExtResource("8_2ekry")
+texture_filter = 0
+billboard_mode = 1
+
+[sub_resource type="QuadMesh" id="QuadMesh_eipc6"]
+material = SubResource("StandardMaterial3D_pbd58")
+size = Vector2(0.5, 0.5)
+center_offset = Vector3(0, -0.25, 0)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rwsrj"]
+transparency = 1
+albedo_texture = ExtResource("9_omnv6")
+texture_filter = 0
+billboard_mode = 1
+
+[sub_resource type="QuadMesh" id="QuadMesh_tjr31"]
+material = SubResource("StandardMaterial3D_rwsrj")
+size = Vector2(0.5, 0.5)
+center_offset = Vector3(0, -0.25, 0)
+
+[resource]
+item/0/name = "Rock"
+item/0/mesh = ExtResource("1_3u516")
+item/0/mesh_transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+item/0/mesh_cast_shadow = 1
+item/0/shapes = [SubResource("BoxShape3D_p12nq"), Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)]
+item/0/navigation_mesh_transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+item/0/navigation_layers = 1
+item/1/name = "Sand1"
+item/1/mesh = ExtResource("2_ld61h")
+item/1/mesh_transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+item/1/mesh_cast_shadow = 1
+item/1/shapes = [SubResource("BoxShape3D_kk4ie"), Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)]
+item/1/navigation_mesh_transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+item/1/navigation_layers = 1
+item/2/name = "Sand2"
+item/2/mesh = ExtResource("3_c7ho6")
+item/2/mesh_transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+item/2/mesh_cast_shadow = 1
+item/2/shapes = [SubResource("BoxShape3D_ttkyl"), Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)]
+item/2/navigation_mesh_transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+item/2/navigation_layers = 1
+item/3/name = "Tree1"
+item/3/mesh = SubResource("QuadMesh_fuqmr")
+item/3/mesh_transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.54, 0, -0.23)
+item/3/mesh_cast_shadow = 1
+item/3/shapes = []
+item/3/navigation_mesh_transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+item/3/navigation_layers = 1
+item/4/name = "Tree2"
+item/4/mesh = SubResource("QuadMesh_yxwwy")
+item/4/mesh_transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.425, 0, 0.325)
+item/4/mesh_cast_shadow = 1
+item/4/shapes = []
+item/4/navigation_mesh_transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+item/4/navigation_layers = 1
+item/5/name = "Cactus1"
+item/5/mesh = SubResource("QuadMesh_xmk83")
+item/5/mesh_transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.31, 0, -0.265)
+item/5/mesh_cast_shadow = 1
+item/5/shapes = []
+item/5/navigation_mesh_transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+item/5/navigation_layers = 1
+item/6/name = "Cactus2"
+item/6/mesh = SubResource("QuadMesh_phoxs")
+item/6/mesh_transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0, -0.315, 0, -0.42)
+item/6/mesh_cast_shadow = 1
+item/6/shapes = []
+item/6/navigation_mesh_transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+item/6/navigation_layers = 1
+item/7/name = "Bones1"
+item/7/mesh = SubResource("QuadMesh_eipc6")
+item/7/mesh_transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.33, 0, -0.585)
+item/7/mesh_cast_shadow = 1
+item/7/shapes = []
+item/7/navigation_mesh_transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+item/7/navigation_layers = 1
+item/8/name = "Bones2"
+item/8/mesh = SubResource("QuadMesh_tjr31")
+item/8/mesh_transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.325, 0, -0.335)
+item/8/mesh_cast_shadow = 1
+item/8/shapes = []
+item/8/navigation_mesh_transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+item/8/navigation_layers = 1

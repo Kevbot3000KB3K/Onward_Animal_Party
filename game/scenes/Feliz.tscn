@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://dvbl8woph1vgo"]
+
+[ext_resource type="Script" uid="uid://di51r70rrpxio" path="res://game/scripts/Unit.gd" id="1_j32yt"]
+[ext_resource type="SpriteFrames" uid="uid://xa8wm23bmuw5" path="res://game/assets/sprites/SpriteSheets/Jobs/SpriteFrames/Curate.tres" id="2_ugnpg"]
+[ext_resource type="SpriteFrames" uid="uid://cuxwjl1o7mc0q" path="res://game/assets/sprites/SpriteSheets/Jobs/SpriteFrames/Marksman.tres" id="3_cl7qq"]
+[ext_resource type="SpriteFrames" uid="uid://dlfhx4100avgs" path="res://game/assets/sprites/SpriteSheets/Units/Feliz.tres" id="4_62g6p"]
+[ext_resource type="SpriteFrames" uid="uid://dkaiveb75g7rd" path="res://game/assets/sprites/SpriteSheets/Units/Feliz_Hair.tres" id="5_fx7ar"]
+
+[node name="Feliz" type="Node2D" unique_id=1830264067]
+script = ExtResource("1_j32yt")
+curate_frames = ExtResource("2_ugnpg")
+marksman_frames = ExtResource("3_cl7qq")
+
+[node name="Body" type="AnimatedSprite2D" parent="." unique_id=424834085]
+sprite_frames = ExtResource("4_62g6p")
+animation = &"walkDL"
+
+[node name="Gear" type="AnimatedSprite2D" parent="." unique_id=555932625]
+sprite_frames = ExtResource("3_cl7qq")
+animation = &"walkDL"
+
+[node name="Hair" type="AnimatedSprite2D" parent="." unique_id=2118669537]
+visible = false
+sprite_frames = ExtResource("5_fx7ar")
+animation = &"walkUL"
+
+[connection signal="frame_changed" from="Body" to="." method="_on_body_frame_changed"]

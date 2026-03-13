@@ -1,0 +1,14 @@
+[gd_resource type="BoxMesh" format=3 uid="uid://dfxt6m2p4d1dp"]
+
+[ext_resource type="Texture2D" uid="uid://y6746bbb41h1" path="res://game/assets/sprites/Terrain/Desert/Tiles/Sand1.png" id="1_oyj7y"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_novtf"]
+shading_mode = 2
+specular_mode = 2
+albedo_texture = ExtResource("1_oyj7y")
+texture_filter = 0
+texture_repeat = false
+
+[resource]
+lightmap_size_hint = Vector2i(14, 21)
+material = SubResource("StandardMaterial3D_novtf")

@@ -1,0 +1,10 @@
+[gd_resource type="BoxMesh" format=3 uid="uid://bn7gihwddg2ol"]
+
+[ext_resource type="Texture2D" uid="uid://tcy0ap0d1mtr" path="res://game/assets/sprites/Terrain/Desert/Tiles/Sand2.png" id="1_l5nje"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2v1hw"]
+albedo_texture = ExtResource("1_l5nje")
+texture_filter = 0
+
+[resource]
+material = SubResource("StandardMaterial3D_2v1hw")

@@ -1,0 +1,82 @@
+[gd_scene format=3 uid="uid://ccgu211mp1d1f"]
+
+[ext_resource type="Script" uid="uid://di51r70rrpxio" path="res://game/scripts/Unit.gd" id="1_3sbpl"]
+[ext_resource type="SpriteFrames" uid="uid://dlfhx4100avgs" path="res://game/assets/sprites/SpriteSheets/Units/Feliz.tres" id="1_me37f"]
+[ext_resource type="SpriteFrames" uid="uid://cuxwjl1o7mc0q" path="res://game/assets/sprites/SpriteSheets/Jobs/SpriteFrames/Marksman.tres" id="2_0h7t4"]
+[ext_resource type="SpriteFrames" uid="uid://dkaiveb75g7rd" path="res://game/assets/sprites/SpriteSheets/Units/Feliz_Hair.tres" id="3_3sbpl"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_lk5tw"]
+size = Vector3(0.19433594, 0.41606998, 0.3121338)
+
+[sub_resource type="SphereMesh" id="SphereMesh_3sbpl"]
+radius = 0.05
+height = 0.1
+radial_segments = 4
+rings = 2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lk5tw"]
+shading_mode = 0
+albedo_color = Color(0.72, 0.72, 0.2808, 1)
+
+[node name="Feliz" type="CharacterBody3D" unique_id=701615420]
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 0, 0, 0)
+script = ExtResource("1_3sbpl")
+
+[node name="Body" type="AnimatedSprite3D" parent="." unique_id=1423684694]
+cast_shadow = 2
+billboard = 1
+shaded = true
+texture_filter = 0
+sprite_frames = ExtResource("1_me37f")
+animation = &"idleDL"
+autoplay = "idleDL"
+frame_progress = 0.53592914
+
+[node name="Gear" type="AnimatedSprite3D" parent="." unique_id=560938564]
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 0, 0, 0)
+top_level = true
+sorting_offset = 1.0
+cast_shadow = 2
+billboard = 1
+shaded = true
+texture_filter = 0
+sprite_frames = ExtResource("2_0h7t4")
+animation = &"idleDL"
+
+[node name="Hair" type="AnimatedSprite3D" parent="." unique_id=1277411489]
+visible = false
+sorting_offset = 2.0
+cast_shadow = 2
+billboard = 1
+shaded = true
+texture_filter = 0
+sprite_frames = ExtResource("3_3sbpl")
+animation = &"idleUL"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1584104800]
+visible = false
+shape = SubResource("BoxShape3D_lk5tw")
+
+[node name="WaitOrbs" type="Node3D" parent="." unique_id=1476522867]
+
+[node name="Orb_DL" type="MeshInstance3D" parent="WaitOrbs" unique_id=1827544127]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.162, 0.2)
+mesh = SubResource("SphereMesh_3sbpl")
+surface_material_override/0 = SubResource("StandardMaterial3D_lk5tw")
+
+[node name="Orb_DR" type="MeshInstance3D" parent="WaitOrbs" unique_id=1439525696]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2, 0.162, 0)
+mesh = SubResource("SphereMesh_3sbpl")
+surface_material_override/0 = SubResource("StandardMaterial3D_lk5tw")
+
+[node name="Orb_UR" type="MeshInstance3D" parent="WaitOrbs" unique_id=26553733]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.162, -0.2)
+mesh = SubResource("SphereMesh_3sbpl")
+surface_material_override/0 = SubResource("StandardMaterial3D_lk5tw")
+
+[node name="Orb_UL" type="MeshInstance3D" parent="WaitOrbs" unique_id=67994980]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2, 0.162, 0)
+mesh = SubResource("SphereMesh_3sbpl")
+surface_material_override/0 = SubResource("StandardMaterial3D_lk5tw")
+
+[connection signal="frame_changed" from="Body" to="." method="_on_body_frame_changed"]

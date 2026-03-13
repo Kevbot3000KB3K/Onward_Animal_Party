@@ -1,0 +1,12 @@
+[gd_resource type="BoxMesh" format=3 uid="uid://dqielb6tbcl47"]
+
+[ext_resource type="Texture2D" uid="uid://dylx30rdwh3sn" path="res://game/assets/sprites/Terrain/Desert/Tiles/Rock1.png" id="1_poi4p"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ltuj2"]
+albedo_texture = ExtResource("1_poi4p")
+metallic_specular = 0.0
+normal_enabled = true
+texture_filter = 0
+
+[resource]
+material = SubResource("StandardMaterial3D_ltuj2")

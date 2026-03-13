@@ -1,0 +1,152 @@
+[gd_scene format=3 uid="uid://b2murxeg5vqy2"]
+
+[ext_resource type="Script" uid="uid://ci1bv77xvgm14" path="res://UI.gd" id="1_yqla1"]
+[ext_resource type="Texture2D" uid="uid://bdmy0nmihismn" path="res://game/assets/sprites/UI/Debug/UpArrow.png" id="2_x8kua"]
+[ext_resource type="Texture2D" uid="uid://dq46s67k8hicc" path="res://game/assets/sprites/UI/Debug/ZoomOut.png" id="3_rli23"]
+[ext_resource type="Texture2D" uid="uid://dqyhxrc0d7t4e" path="res://game/assets/sprites/UI/Debug/ZoomIn.png" id="4_7c1cp"]
+[ext_resource type="Texture2D" uid="uid://bddefoq4ubcqs" path="res://game/assets/sprites/UI/Debug/RotateCameraRight.png" id="5_wq168"]
+[ext_resource type="Texture2D" uid="uid://bxhyjxs121kda" path="res://game/assets/sprites/UI/Debug/RotateCameraLeft.png" id="6_rqrux"]
+[ext_resource type="Texture2D" uid="uid://cuuusq7nu68j2" path="res://game/assets/sprites/UI/Debug/LeftArrow.png" id="7_jcfp1"]
+[ext_resource type="Texture2D" uid="uid://dvoivx11jidl6" path="res://game/assets/sprites/UI/Debug/RightArrow.png" id="8_ogmug"]
+[ext_resource type="Texture2D" uid="uid://ce0aqu381eha5" path="res://game/assets/sprites/UI/Debug/DownArrow.png" id="9_mk7n8"]
+[ext_resource type="Texture2D" uid="uid://dk8xc6c6ayrqt" path="res://game/assets/sprites/UI/Debug/Walk.png" id="10_t3qmf"]
+[ext_resource type="Texture2D" uid="uid://c8vyxjbh0venb" path="res://game/assets/sprites/UI/Debug/Wait.png" id="11_5bwjg"]
+[ext_resource type="Texture2D" uid="uid://bxslqulafjwfi" path="res://game/assets/sprites/UI/Debug/Curate.png" id="12_noi1s"]
+[ext_resource type="Texture2D" uid="uid://d3gk013xhkm2k" path="res://game/assets/sprites/UI/Debug/Marksman.png" id="13_sag3q"]
+[ext_resource type="Texture2D" uid="uid://cjy4ihwcfn2gv" path="res://game/assets/sprites/UI/Debug/Nude.png" id="14_k13uy"]
+
+[node name="UI" type="Control" unique_id=1158419680]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_yqla1")
+
+[node name="Up" type="TextureButton" parent="." unique_id=1105686065]
+layout_mode = 0
+offset_left = 285.0
+offset_top = 130.0
+offset_right = 317.0
+offset_bottom = 162.0
+scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("2_x8kua")
+
+[node name="ZoomOut" type="TextureButton" parent="." unique_id=136107500]
+layout_mode = 0
+offset_left = 310.0
+offset_top = 2.0
+offset_right = 342.0
+offset_bottom = 34.0
+scale = Vector2(0.25, 0.25)
+texture_normal = ExtResource("3_rli23")
+
+[node name="ZoomIn" type="TextureButton" parent="." unique_id=2066101595]
+layout_mode = 0
+offset_left = 301.0
+offset_top = 2.0
+offset_right = 333.0
+offset_bottom = 34.0
+scale = Vector2(0.25, 0.25)
+texture_normal = ExtResource("4_7c1cp")
+
+[node name="RotateRight" type="TextureButton" parent="." unique_id=1683904257]
+layout_mode = 0
+offset_left = 292.0
+offset_top = 2.0
+offset_right = 324.0
+offset_bottom = 34.0
+scale = Vector2(0.25, 0.25)
+texture_normal = ExtResource("5_wq168")
+
+[node name="RotateLeft" type="TextureButton" parent="." unique_id=1668112653]
+layout_mode = 0
+offset_left = 283.0
+offset_top = 2.0
+offset_right = 315.0
+offset_bottom = 34.0
+scale = Vector2(0.25, 0.25)
+texture_normal = ExtResource("6_rqrux")
+
+[node name="Left" type="TextureButton" parent="." unique_id=1707569845]
+layout_mode = 0
+offset_left = 269.0
+offset_top = 146.0
+offset_right = 301.0
+offset_bottom = 178.0
+scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("7_jcfp1")
+
+[node name="Right" type="TextureButton" parent="." unique_id=2063357583]
+layout_mode = 0
+offset_left = 301.0
+offset_top = 146.0
+offset_right = 333.0
+offset_bottom = 178.0
+scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("8_ogmug")
+
+[node name="Down" type="TextureButton" parent="." unique_id=888168845]
+layout_mode = 0
+offset_left = 285.0
+offset_top = 162.0
+offset_right = 317.0
+offset_bottom = 194.0
+scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("9_mk7n8")
+
+[node name="Walk" type="TextureButton" parent="." unique_id=784164463]
+layout_mode = 0
+offset_left = 277.0
+offset_top = 95.0
+offset_right = 341.0
+offset_bottom = 127.0
+scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("10_t3qmf")
+
+[node name="Wait" type="TextureButton" parent="." unique_id=1010612385]
+layout_mode = 0
+offset_left = 277.0
+offset_top = 112.0
+offset_right = 341.0
+offset_bottom = 144.0
+scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("11_5bwjg")
+
+[node name="Curate" type="TextureButton" parent="." unique_id=1761650473]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 145.0
+offset_right = 66.0
+offset_bottom = 177.0
+scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("12_noi1s")
+
+[node name="Marksman" type="TextureButton" parent="." unique_id=1318530601]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 128.0
+offset_right = 66.0
+offset_bottom = 160.0
+scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("13_sag3q")
+
+[node name="Nude" type="TextureButton" parent="." unique_id=2035641508]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 162.0
+offset_right = 66.0
+offset_bottom = 194.0
+scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("14_k13uy")
+
+[connection signal="pressed" from="Up" to="." method="_on_up_pressed"]
+[connection signal="pressed" from="ZoomOut" to="." method="_on_zoom_out_pressed"]
+[connection signal="pressed" from="ZoomIn" to="." method="_on_zoom_in_pressed"]
+[connection signal="pressed" from="RotateRight" to="." method="_on_rotate_right_pressed"]
+[connection signal="pressed" from="RotateLeft" to="." method="_on_rotate_left_pressed"]
+[connection signal="pressed" from="Left" to="." method="_on_left_pressed"]
+[connection signal="pressed" from="Right" to="." method="_on_right_pressed"]
+[connection signal="pressed" from="Down" to="." method="_on_down_pressed"]
+[connection signal="pressed" from="Walk" to="." method="_on_walk_pressed"]
+[connection signal="pressed" from="Wait" to="." method="_on_wait_pressed"]
+[connection signal="pressed" from="Curate" to="." method="_on_curate_pressed"]
+[connection signal="pressed" from="Marksman" to="." method="_on_marksman_pressed"]
+[connection signal="pressed" from="Nude" to="." method="_on_nude_pressed"]

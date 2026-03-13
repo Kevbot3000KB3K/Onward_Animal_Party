@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://c2nelwg3j5jw5"]
+
+[ext_resource type="Texture2D" uid="uid://17dsai61kmyl" path="res://game/assets/sprites/CubeAtlas1.png" id="1_a2u5t"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_p2rxy"]
+albedo_texture = ExtResource("1_a2u5t")
+
+[sub_resource type="BoxMesh" id="BoxMesh_mxo3b"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_77rkq"]
+
+[node name="Tile" type="Node3D" unique_id=1326507332]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1123507361]
+material_override = SubResource("StandardMaterial3D_p2rxy")
+mesh = SubResource("BoxMesh_mxo3b")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=796208929]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1000485978]
+shape = SubResource("BoxShape3D_77rkq")

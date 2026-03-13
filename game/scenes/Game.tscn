@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://c72n3vxgpdhtw"]
+
+[ext_resource type="FontFile" uid="uid://0e7w8wtbyaex" path="res://game/Tools/aseprite.otf" id="1_joedu"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_3n1n5"]
+font = ExtResource("1_joedu")
+
+[node name="Game" type="Node2D" unique_id=1831069182]
+
+[node name="Control" type="Control" parent="." unique_id=1050025630]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="Control" unique_id=2110846365]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_fonts/font = ExtResource("1_joedu")
+text = "Hello!"
+label_settings = SubResource("LabelSettings_3n1n5")

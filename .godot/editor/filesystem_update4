@@ -1,0 +1,15 @@
+res://game/Map/Terrain/Terrain_Library.tres
+res://game/assets/sprites/SpriteSheets/Jobs/SpriteFrames/Curate.tres
+res://game/assets/sprites/SpriteSheets/Jobs/SpriteFrames/Marksman.tres
+res://game/assets/sprites/SpriteSheets/Units/Feliz.tres
+res://game/assets/sprites/SpriteSheets/Units/Feliz_Hair.tres
+res://game/scenes/Cursor.tscn
+res://game/scenes/TestGame.tscn
+res://game/scenes/GameScene.gd
+res://game/Map/Terrain/Sand1.tres
+res://game/scenes/TestMap.tscn
+res://game/Map/Terrain/Sand2.tres
+res://GridMapController.gd
+res://game/scenes/PlayerTest.tscn
+res://game/Map/Terrain/RockCube.tres
+res://game/scenes/Cursor.gd
