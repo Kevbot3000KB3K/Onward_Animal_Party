@@ -1,3 +1,7 @@
+TextureRect
+Control
+ColorRect
+Label
 CollisionShape3D
 StaticBody3D
 Node3D
@@ -6,9 +10,5 @@ MeshInstance3D
 AnimatedSprite3D
 DirectionalLight3D
 TextureButton
-Control
-TextureRect
-Label
 Node2D
 WorldEnvironment
-OmniLight3D

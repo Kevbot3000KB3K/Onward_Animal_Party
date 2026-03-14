@@ -5,20 +5,20 @@
 [ext_resource type="Texture2D" uid="uid://b6wqgm4rp6ib1" path="res://game/assets/sprites/UI/Battle/Buttons/ZoomOutPressed.png" id="3_mk7n8"]
 [ext_resource type="Texture2D" uid="uid://bt40sea174rbu" path="res://game/assets/sprites/UI/Battle/Buttons/ZoomIn.png" id="4_t3qmf"]
 [ext_resource type="Texture2D" uid="uid://dwe5oojjddyyf" path="res://game/assets/sprites/UI/Battle/Buttons/ZoomInPressed.png" id="5_5bwjg"]
-[ext_resource type="Texture2D" uid="uid://ct0n8xrk07n56" path="res://game/assets/sprites/UI/Battle/QuickStatusPanel.png" id="6_bp68v"]
 [ext_resource type="Texture2D" uid="uid://1mdvgatab08x" path="res://game/assets/sprites/UI/Battle/Buttons/RotateRight.png" id="6_noi1s"]
-[ext_resource type="Texture2D" uid="uid://dr3fjoef70gr8" path="res://game/assets/sprites/Portraits/Feliz.png" id="7_kqnyk"]
 [ext_resource type="Texture2D" uid="uid://i7g8e0733pfd" path="res://game/assets/sprites/UI/Battle/Buttons/RotateRightPressed.png" id="7_sag3q"]
 [ext_resource type="Texture2D" uid="uid://b135kvcmer760" path="res://game/assets/sprites/UI/Battle/Buttons/RotateLeft.png" id="8_k13uy"]
 [ext_resource type="FontFile" uid="uid://0e7w8wtbyaex" path="res://game/Tools/aseprite.otf" id="8_ncdk7"]
-[ext_resource type="Texture2D" uid="uid://bskr4m07qywgh" path="res://game/assets/sprites/Icons/QuickStatus/HealthIcon.png" id="9_1k46v"]
 [ext_resource type="Texture2D" uid="uid://oqpvyh4cxfmr" path="res://game/assets/sprites/UI/Battle/Buttons/RotateLeftPressed.png" id="9_6vho3"]
-[ext_resource type="Texture2D" uid="uid://bwrl01yyaytgk" path="res://game/assets/sprites/Icons/QuickStatus/EnergyIcon.png" id="10_cxfrl"]
-[ext_resource type="Texture2D" uid="uid://btje1dd4vk6sg" path="res://game/assets/sprites/Icons/QuickStatus/ManaIcon.png" id="11_de2qs"]
+[ext_resource type="Texture2D" uid="uid://bntlb0mj3856k" path="res://game/assets/sprites/UI/QuickStatus/QuickStatusPanel2.png" id="10_t3qmf"]
+[ext_resource type="Texture2D" uid="uid://cmw3af2t7wqwh" path="res://game/assets/sprites/UI/QuickStatus/QuickStatusPanelOverlay.png" id="11_t3qmf"]
+[ext_resource type="Texture2D" uid="uid://cd6c6nwhtqjrr" path="res://game/assets/sprites/Portraits/Felizx4.png" id="12_5bwjg"]
 [ext_resource type="Texture2D" uid="uid://cmbwsmkapd4w3" path="res://game/assets/sprites/UI/Battle/Buttons/ActionButton.png" id="12_mrsbp"]
 [ext_resource type="Texture2D" uid="uid://cb76ut457d2dj" path="res://game/assets/sprites/UI/Battle/Buttons/ActionButtonPressed.png" id="13_olj0l"]
+[ext_resource type="Texture2D" uid="uid://de57pip2br808" path="res://game/assets/sprites/Icons/Role Icons/Role/Ranger.png" id="14_noi1s"]
 [ext_resource type="Texture2D" uid="uid://c06sbkhhcits6" path="res://game/assets/sprites/UI/Battle/Buttons/InspectButton.png" id="14_p0oaf"]
 [ext_resource type="Texture2D" uid="uid://lsbqm5403htj" path="res://game/assets/sprites/UI/Battle/Buttons/InspectButtonPressed.png" id="15_s751a"]
+[ext_resource type="Texture2D" uid="uid://thweveg5a4j1" path="res://game/assets/sprites/Icons/Role Icons/Subrole/Sniper.png" id="15_sag3q"]
 [ext_resource type="Texture2D" uid="uid://bw0fepfjj0dqk" path="res://game/assets/sprites/UI/Battle/Buttons/MoveButton.png" id="16_poikp"]
 [ext_resource type="Texture2D" uid="uid://cktfrafoca7w6" path="res://game/assets/sprites/UI/Battle/Buttons/MoveButtonPressed.png" id="17_m31bh"]
 [ext_resource type="Texture2D" uid="uid://clrwl2tyq5a4r" path="res://game/assets/sprites/UI/Battle/Buttons/WaitButton.png" id="22_t3qmf"]
@@ -26,263 +26,338 @@
 
 [sub_resource type="LabelSettings" id="LabelSettings_mrsbp"]
 font = ExtResource("8_ncdk7")
-font_size = 9
+font_size = 22
 outline_color = Color(0, 0, 0, 1)
-shadow_size = 4
+shadow_size = 9
 shadow_color = Color(0, 0, 0, 1)
 shadow_offset = Vector2(0, 0)
 
 [sub_resource type="LabelSettings" id="LabelSettings_olj0l"]
-font_size = 6
-outline_size = 2
+font_size = 12
+outline_size = 5
 outline_color = Color(0, 0, 0, 1)
 
+[sub_resource type="LabelSettings" id="LabelSettings_t3qmf"]
+font_size = 9
+font_color = Color(1, 1, 0, 1)
+shadow_size = 5
+shadow_color = Color(0, 0, 0, 1)
+shadow_offset = Vector2(0, 0)
+
+[sub_resource type="LabelSettings" id="LabelSettings_5bwjg"]
+font_size = 9
+font_color = Color(0, 0.73333335, 1, 1)
+shadow_size = 5
+shadow_color = Color(0, 0, 0, 1)
+shadow_offset = Vector2(0, 0)
+
 [sub_resource type="LabelSettings" id="LabelSettings_p0oaf"]
-font_size = 5
-shadow_size = 3
+font_size = 12
+shadow_size = 7
 shadow_color = Color(0, 0, 0, 1)
 shadow_offset = Vector2(0, 0)
 
 [sub_resource type="LabelSettings" id="LabelSettings_s751a"]
-font_size = 5
-font_color = Color(0.65, 0.65, 0.65, 1)
-shadow_size = 3
+font_size = 12
+shadow_size = 7
 shadow_color = Color(0, 0, 0, 1)
 shadow_offset = Vector2(0, 0)
 
 [node name="UI" type="Control" unique_id=1158419680]
 layout_mode = 3
-anchors_preset = 0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("1_1rjsm")
 
 [node name="ZoomOut" type="TextureButton" parent="." unique_id=136107500]
 layout_mode = 0
-offset_left = 302.0
+offset_left = 1390.0
 offset_top = 2.0
-offset_right = 318.0
+offset_right = 1406.0
 offset_bottom = 18.0
+scale = Vector2(3, 3)
 texture_normal = ExtResource("2_ogmug")
 texture_pressed = ExtResource("3_mk7n8")
 
 [node name="ZoomIn" type="TextureButton" parent="." unique_id=2066101595]
 layout_mode = 0
-offset_left = 285.0
+offset_left = 1340.0
 offset_top = 2.0
-offset_right = 301.0
+offset_right = 1356.0
 offset_bottom = 18.0
+scale = Vector2(3, 3)
 texture_normal = ExtResource("4_t3qmf")
 texture_pressed = ExtResource("5_5bwjg")
 
 [node name="RotateRight" type="TextureButton" parent="." unique_id=1683904257]
 layout_mode = 0
-offset_left = 268.0
+offset_left = 1290.0
 offset_top = 2.0
-offset_right = 284.0
+offset_right = 1306.0
 offset_bottom = 18.0
+scale = Vector2(3, 3)
 texture_normal = ExtResource("6_noi1s")
 texture_pressed = ExtResource("7_sag3q")
 
 [node name="RotateLeft" type="TextureButton" parent="." unique_id=1668112653]
 layout_mode = 0
-offset_left = 251.0
+offset_left = 1240.0
 offset_top = 2.0
-offset_right = 267.0
+offset_right = 1256.0
 offset_bottom = 18.0
+scale = Vector2(3, 3)
 texture_normal = ExtResource("8_k13uy")
 texture_pressed = ExtResource("9_6vho3")
 
 [node name="QuickStatus" type="Control" parent="." unique_id=1959322100]
-anchors_preset = 0
-offset_left = 2.0
-offset_top = 128.0
-offset_right = 42.0
-offset_bottom = 168.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -288.99997
+offset_top = 236.00006
+offset_right = -288.99997
+offset_bottom = 236.00006
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.5, 1.5)
 
 [node name="Background" type="TextureRect" parent="QuickStatus" unique_id=1102380814]
-layout_mode = 0
-offset_right = 120.0
-offset_bottom = 64.0
-scale = Vector2(1, 0.78)
-texture = ExtResource("6_bp68v")
+modulate = Color(1, 1, 1, 0.80784315)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -286.5
+offset_top = -26.499985
+offset_right = 156.5
+offset_bottom = 111.500015
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("10_t3qmf")
+
+[node name="Overlay" type="TextureRect" parent="QuickStatus" unique_id=233213391]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -286.5
+offset_top = -26.499985
+offset_right = 156.5
+offset_bottom = 111.500015
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("11_t3qmf")
 
 [node name="Portrait" type="TextureRect" parent="QuickStatus" unique_id=415088839]
 texture_filter = 1
 layout_mode = 0
-offset_right = 50.0
-offset_bottom = 50.0
-texture = ExtResource("7_kqnyk")
+offset_left = -284.0
+offset_top = -24.0
+offset_right = 1052.0
+offset_bottom = 1320.35
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("12_5bwjg")
 
 [node name="Name" type="Label" parent="QuickStatus" unique_id=1515105866]
 layout_mode = 0
-offset_left = 53.0
-offset_top = 2.0
-offset_right = 77.0
-offset_bottom = 11.0
+offset_left = -146.79994
+offset_top = -23.00002
+offset_right = 11.200058
+offset_bottom = 6.999981
 text = "Feliz"
 label_settings = SubResource("LabelSettings_mrsbp")
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Health" type="Node2D" parent="QuickStatus" unique_id=15408195]
-position = Vector2(52, 12)
-
-[node name="Icon" type="TextureRect" parent="QuickStatus/Health" unique_id=1698474830]
-offset_right = 16.0
-offset_bottom = 16.0
-scale = Vector2(0.6, 0.6)
-texture = ExtResource("9_1k46v")
+position = Vector2(-132.73335, 17.999985)
 
 [node name="Current" type="Label" parent="QuickStatus/Health" unique_id=441962262]
-offset_left = 12.0
-offset_top = 2.0
-offset_right = 25.0
-offset_bottom = 8.0
+offset_left = 41.333344
+offset_top = -1.0
+offset_right = 69.33334
+offset_bottom = 11.0
 text = "999"
 label_settings = SubResource("LabelSettings_olj0l")
+horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Maximum" type="Label" parent="QuickStatus/Health" unique_id=1176534806]
-offset_left = 31.0
-offset_top = 2.0
-offset_right = 44.0
-offset_bottom = 8.0
+offset_left = 83.33334
+offset_top = -1.0
+offset_right = 111.33334
+offset_bottom = 11.0
 text = "999"
 label_settings = SubResource("LabelSettings_olj0l")
+horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Energy" type="Node2D" parent="QuickStatus" unique_id=1193086754]
-position = Vector2(52, 22)
-
-[node name="Icon" type="TextureRect" parent="QuickStatus/Energy" unique_id=1259862235]
-offset_right = 16.0
-offset_bottom = 16.0
-scale = Vector2(0.6, 0.6)
-texture = ExtResource("10_cxfrl")
+position = Vector2(-121.399994, 41)
 
 [node name="Current" type="Label" parent="QuickStatus/Energy" unique_id=120534763]
-offset_left = 12.0
-offset_top = 2.0
-offset_right = 25.0
+offset_left = 18.0
+offset_top = -3.0
+offset_right = 48.0
 offset_bottom = 8.0
 text = "999"
-label_settings = SubResource("LabelSettings_olj0l")
+label_settings = SubResource("LabelSettings_t3qmf")
+horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Maximum" type="Label" parent="QuickStatus/Energy" unique_id=1888508954]
-offset_left = 31.0
-offset_top = 2.0
-offset_right = 44.0
+[node name="Maximum" type="Label" parent="QuickStatus/Energy" unique_id=819024159]
+offset_left = 46.0
+offset_top = -3.0
+offset_right = 76.0
 offset_bottom = 8.0
 text = "999"
-label_settings = SubResource("LabelSettings_olj0l")
+label_settings = SubResource("LabelSettings_t3qmf")
+horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Spirit" type="Node2D" parent="QuickStatus" unique_id=806191972]
-position = Vector2(52, 32)
+[node name="Spirit" type="Node2D" parent="QuickStatus" unique_id=1719696426]
+position = Vector2(-121.399994, 59)
 
-[node name="Icon" type="TextureRect" parent="QuickStatus/Spirit" unique_id=1988159369]
-offset_right = 16.0
-offset_bottom = 16.0
-scale = Vector2(0.6, 0.6)
-texture = ExtResource("11_de2qs")
-
-[node name="Label" type="Label" parent="QuickStatus/Spirit" unique_id=866962444]
-offset_left = 12.0
-offset_top = 2.0
-offset_right = 25.0
-offset_bottom = 8.0
+[node name="Current" type="Label" parent="QuickStatus/Spirit" unique_id=321046326]
+offset_left = 18.0
+offset_top = -2.0
+offset_right = 48.0
+offset_bottom = 9.0
 text = "999"
-label_settings = SubResource("LabelSettings_olj0l")
+label_settings = SubResource("LabelSettings_5bwjg")
+horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Maximum" type="Label" parent="QuickStatus/Spirit" unique_id=1877751822]
-offset_left = 31.0
-offset_top = 2.0
-offset_right = 44.0
+[node name="Maximum" type="Label" parent="QuickStatus/Spirit" unique_id=1000571592]
+offset_left = 46.0
+offset_top = -3.0
+offset_right = 76.0
 offset_bottom = 8.0
 text = "999"
-label_settings = SubResource("LabelSettings_olj0l")
+label_settings = SubResource("LabelSettings_5bwjg")
+horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Level" type="Node2D" parent="QuickStatus" unique_id=748151934]
-position = Vector2(75, 43)
+position = Vector2(40.599945, -17)
 
 [node name="Lv" type="Label" parent="QuickStatus/Level" unique_id=1528027028]
-offset_right = 13.0
-offset_bottom = 9.0
+offset_left = -15.0
+offset_top = -3.0
+offset_right = 6.0
+offset_bottom = 12.0
 text = "Lv"
 label_settings = SubResource("LabelSettings_p0oaf")
 
 [node name="LvAmount" type="Label" parent="QuickStatus/Level" unique_id=398268670]
-offset_left = 8.0
-offset_right = 21.0
-offset_bottom = 5.0
+offset_left = 12.0
+offset_top = -3.0
+offset_right = 33.0
+offset_bottom = 12.0
 text = "99"
 label_settings = SubResource("LabelSettings_p0oaf")
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Experience" type="Node2D" parent="QuickStatus" unique_id=355005856]
-position = Vector2(101, 36)
+position = Vector2(116.19998, -25)
 
 [node name="Exp" type="Label" parent="QuickStatus/Experience" unique_id=482090100]
-offset_left = -4.0
-offset_top = 7.0
-offset_right = 10.0
-offset_bottom = 16.0
+offset_left = -22.0
+offset_top = 5.0
+offset_right = 12.0
+offset_bottom = 20.0
 text = "Exp"
 label_settings = SubResource("LabelSettings_s751a")
 
 [node name="ExpAmount" type="Label" parent="QuickStatus/Experience" unique_id=248887041]
-offset_left = 9.0
-offset_top = 7.0
-offset_right = 23.0
-offset_bottom = 16.0
+offset_left = 17.0
+offset_top = 5.0
+offset_right = 38.0
+offset_bottom = 20.0
 text = "99"
 label_settings = SubResource("LabelSettings_s751a")
+
+[node name="Job" type="Control" parent="QuickStatus" unique_id=559108460]
+anchors_preset = 0
+offset_left = -25.600067
+offset_right = 14.399933
+offset_bottom = 40.0
+
+[node name="Job" type="TextureRect" parent="QuickStatus/Job" unique_id=1639046708]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Role" type="TextureRect" parent="QuickStatus/Job" unique_id=1154675747]
+layout_mode = 0
+offset_left = -62.0
+offset_top = 79.0
+offset_right = -30.0
+offset_bottom = 111.0
+texture = ExtResource("14_noi1s")
+
+[node name="Duty" type="TextureRect" parent="QuickStatus/Job" unique_id=2046874380]
+layout_mode = 0
+offset_left = -28.0
+offset_top = 79.0
+offset_right = 4.0
+offset_bottom = 111.0
+texture = ExtResource("15_sag3q")
 
 [node name="Choices" type="Control" parent="." unique_id=423688423]
 layout_mode = 1
 anchors_preset = 0
-offset_top = -19.0
-offset_right = 4.0
-offset_bottom = -15.0
+offset_left = 1072.0
+offset_top = 480.0
+offset_right = 1433.0
+offset_bottom = 803.0
 
 [node name="Move" type="TextureButton" parent="Choices" unique_id=1223255566]
 layout_mode = 0
-offset_left = 284.0
-offset_top = 130.0
-offset_right = 318.0
-offset_bottom = 146.0
+offset_left = 230.0
+offset_top = 58.0
+offset_right = 358.0
+offset_bottom = 122.0
 texture_normal = ExtResource("16_poikp")
 texture_pressed = ExtResource("17_m31bh")
+stretch_mode = 0
 
 [node name="Action" type="TextureButton" parent="Choices" unique_id=2796129]
 layout_mode = 0
-offset_left = 284.0
-offset_top = 147.0
-offset_right = 318.0
-offset_bottom = 163.0
+offset_left = 230.0
+offset_top = 124.0
+offset_right = 358.0
+offset_bottom = 188.0
 texture_normal = ExtResource("12_mrsbp")
 texture_pressed = ExtResource("13_olj0l")
+stretch_mode = 0
 
 [node name="Inspect" type="TextureButton" parent="Choices" unique_id=472772497]
 layout_mode = 0
-offset_left = 284.0
-offset_top = 164.0
-offset_right = 318.0
-offset_bottom = 180.0
+offset_left = 230.0
+offset_top = 190.0
+offset_right = 358.0
+offset_bottom = 254.0
 texture_normal = ExtResource("14_p0oaf")
 texture_pressed = ExtResource("15_s751a")
+stretch_mode = 0
 
 [node name="Wait" type="TextureButton" parent="Choices" unique_id=338255932]
 layout_mode = 0
-offset_left = 284.0
-offset_top = 181.0
-offset_right = 318.0
-offset_bottom = 197.0
+offset_left = 230.0
+offset_top = 256.0
+offset_right = 358.0
+offset_bottom = 320.0
 texture_normal = ExtResource("22_t3qmf")
 texture_pressed = ExtResource("23_5bwjg")
+stretch_mode = 0
 
 [connection signal="pressed" from="ZoomOut" to="." method="_on_zoom_out_pressed"]
 [connection signal="pressed" from="ZoomIn" to="." method="_on_zoom_in_pressed"]

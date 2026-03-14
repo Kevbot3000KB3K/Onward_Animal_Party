@@ -2,6 +2,7 @@ extends Node3D
 
 @export var gridmap: GridMap
 @export var grid_controller: Node
+signal move_tile_chosen(cell)
 
 var selected_unit
 
@@ -113,6 +114,9 @@ func clear_tiles():
 
 
 
+
+
 func _on_tile_selected(cell):
 
 	print("Player chose tile:", cell)
+	move_tile_chosen.emit(cell)

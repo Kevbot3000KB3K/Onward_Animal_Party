@@ -9,3 +9,7 @@ res://game/assets/sprites/SpriteSheets/Units/Feliz_Hair.tres
 res://game/assets/sprites/SpriteSheets/Jobs/SpriteFrames/Curate.tres
 res://game/scenes/TestGame.tscn
 res://game/scripts/CameraRig.gd
+res://game/scripts/MovementSystem.gd
+res://game/scripts/BattleController.gd
+res://game/scripts/Unit.gd
+res://game/scenes/UIPlayerTurn.tscn

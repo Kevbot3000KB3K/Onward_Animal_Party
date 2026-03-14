@@ -34,7 +34,9 @@ func _process(_delta):
 func snap_to_cell(cell: Vector3i, gridmap: GridMap):
 
 	var world = gridmap.map_to_local(cell)
-	world.y += gridmap.cell_size.y * 0.5
+
+	world.y += gridmap.cell_size.y
+	world.y += 0.05
 
 	global_position = world
 

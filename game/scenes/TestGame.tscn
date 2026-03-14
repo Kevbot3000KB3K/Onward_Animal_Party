@@ -53,6 +53,7 @@ visible = false
 [node name="UI" parent="." unique_id=828137587 instance=ExtResource("2_3qy5s")]
 
 [node name="Cursor" parent="." unique_id=695930461 node_paths=PackedStringArray("gridmap", "grid_controller") instance=ExtResource("9_pjihj")]
+visible = false
 gridmap = NodePath("../GridMap/GridMap")
 grid_controller = NodePath("../GridMap")
 
@@ -77,11 +78,12 @@ script = ExtResource("9_yjofe")
 gridmap = NodePath("../../GridMap/GridMap")
 grid_controller = NodePath("../../GridMap")
 
-[node name="BattleController" type="Node3D" parent="Systems" unique_id=895002169 node_paths=PackedStringArray("movement_system", "grid_controller", "selected_unit")]
+[node name="BattleController" type="Node3D" parent="Systems" unique_id=895002169 node_paths=PackedStringArray("movement_system", "grid_controller", "selected_unit", "cursor")]
 script = ExtResource("10_yjofe")
 movement_system = NodePath("../Movement")
 grid_controller = NodePath("../../GridMap")
 selected_unit = NodePath("../../Feliz")
+cursor = NodePath("../../Cursor")
 
 [node name="GroundPlane" type="Node3D" parent="." unique_id=109631841]
 
